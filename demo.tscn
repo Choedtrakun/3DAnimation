@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://byvb8ktijkj00"]
+
+[ext_resource type="Script" uid="uid://cw6816cpvuykj" path="res://demo.gd" id="1_0bhed"]
+[ext_resource type="PackedScene" uid="uid://dh0c8q8fdpu84" path="res://assects/c.tscn" id="1_5hfv0"]
+[ext_resource type="PackedScene" uid="uid://d0kktptbo6dsx" path="res://assects/Floating Island.glb" id="3_m0rpm"]
+[ext_resource type="PackedScene" uid="uid://cdgip08r8i6br" path="res://assects/Pine Trees.glb" id="4_6bw2v"]
+
+[node name="Demo" type="Node3D"]
+script = ExtResource("1_0bhed")
+
+[node name="c1" parent="." instance=ExtResource("1_5hfv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63903, -1.67532, 10.2296)
+
+[node name="c2" parent="." instance=ExtResource("1_5hfv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60268, 0, 13.83)
+
+[node name="c3" parent="." instance=ExtResource("1_5hfv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.92818, -0.556347, -4.32749)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999234, -0.0202627, 0.0334841, 0.00310408, 0.89388, 0.448295, -0.0390144, -0.447847, 0.893259, 2.05499, 9.59712, 21.8407)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.791031, 0.611776, 0, -0.611776, 0.791031, 10.7126, 10.5391, 7.96816)
+shadow_enabled = true
+
+[node name="Root Scene" parent="." instance=ExtResource("3_m0rpm")]
+transform = Transform3D(-0.140784, 0, -2.68631, 0, 2.69, 0, 2.68631, 0, -0.140784, 1.674, -5.18567, -1.611)
+
+[node name="Root Scene2" parent="." instance=ExtResource("4_6bw2v")]
+transform = Transform3D(31.26, 0, 0, 0, 31.26, 0, 0, 0, 31.26, 4.78009, -2.17161, -17.3181)
